@@ -1,0 +1,76 @@
+
+$font-family: 'Montserrat', sans-serif;
+$color-background: #b592f6;
+$color-text: #1d1d1d;
+$color-button-bg: #241744;
+$color-button-hover: #dac10a;
+$color-pagination-bg: #100a1f;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-family;
+	background: $color-background;
+	color: $color-text;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 40px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+
+	.pelicula {
+		text-align: center;
+
+		.titulo {
+			font-size: 16px;
+			font-weight: 600;
+		}
+
+		.poster {
+			width: 100%;
+			margin-bottom: 10px;
+			border-radius: 15px;
+		}
+	}
+}
+
+.paginacion {
+	position: fixed;
+	bottom: 0;
+	background: $color-pagination-bg;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+
+	button {
+		cursor: pointer;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: 50px;
+		width: 200px;
+		background: $color-button-bg;
+		color: #fff;
+		border-radius: 100px;
+		font-family: $font-family;
+		font-weight: 600;
+		transition: 0.3s ease all;
+
+		&:hover {
+			background: $color-button-hover;
+		}
+	}
+}
